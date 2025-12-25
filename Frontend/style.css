@@ -1,0 +1,168 @@
+/* GENERAL PAGE STYLING */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* PAGE BASE */
+.page {
+    min-height: 100vh;               /* Full viewport height */
+    width: 100%;
+    background-size: cover;           /* Cover entire page */
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    color: white;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;          /* vertical center */
+    align-items: center;              /* horizontal center */
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Optional overlay for readability */
+.page::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+.page > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* BACKGROUND IMAGES */
+#home { background-image: url("images/bg_home.jpg"); }
+#login { background-image: url("images/bg_login.jpg"); }
+#menu { background-image: url("images/bg_menu.jpg"); }
+#bill { background-image: url("images/bg_bill.jpg"); }
+
+/* HEADINGS */
+h1 {
+    font-size: 80px;               
+    font-style: italic;            
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 40px;               
+    font-style: italic;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+h3 {
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+/* BUTTONS */
+button {
+    padding: 15px 40px;
+    margin: 20px auto;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #ff5722;
+    border: none;
+    border-radius: 12px;
+    color: white;
+    transition: 0.3s;
+    display: block;
+}
+
+button:hover {
+    background-color: #e64a19;
+    transform: scale(1.05);
+}
+
+/* MENU CATEGORY */
+.category {
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 900px;
+}
+
+/* CATEGORY HEADER */
+.category h3 {
+    background-color: #ff5722;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* MENU ITEM ROW */
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #ccc;
+    color: white;
+    flex-wrap: wrap;
+}
+
+/* ITEM IMAGE */
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+/* ITEM NAME AND PRICE */
+.item-name {
+    font-weight: bold;
+    flex: 1;
+    text-align: left;
+}
+
+.item-price {
+    width: 80px;
+    text-align: right;
+}
+
+/* QUANTITY INPUT */
+.qty-input {
+    width: 60px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-left: 15px;
+}
+
+/* INPUTS ON LOGIN PAGE */
+#login input {
+    display: block;
+    margin: 15px auto;
+    padding: 12px;
+    width: 250px;
+    border-radius: 8px;
+    border: none;
+    font-size: 18px;
+}
+
+/* BILL PAGE */
+#billDetails {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    width: 70%;
+    max-width: 800px;
+    text-align: left;
+    font-size: 18px;
+}

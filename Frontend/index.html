@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Restaurant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HOME PAGE -->
+<div id="home" class="page">
+  <h1>EATING HOUSE</h1>
+  <button type="button" onclick="goToLogin()">Order Now</button>
+</div>
+
+<!-- LOGIN PAGE -->
+<div id="login" class="page" style="display:none;">
+  <h2>Enter Your Details</h2>
+  <input id="name" placeholder="Name">
+  <input id="phone" placeholder="Phone">
+  <br><br>
+  <button type="button" onclick="submitLogin()">Next</button>
+</div>
+
+<div id="menu" class="page" style="display:none;">
+  <h2>Menu</h2>
+
+  <!-- VEG BIRYANI -->
+  <div class="category">
+    <h3>Veg Biryani</h3>
+    <div class="menu-item">
+      <span class="item-name">Veg Biryani</span>
+      <span class="item-price">₹200</span>
+      <input type="number" class="qty-input" id="qty-Veg Biryani" value="0" min="0">
+    </div>
+    <div class="menu-item">
+      <span class="item-name">Paneer Biryani</span>
+      <span class="item-price">₹240</span>
+      <input type="number" class="qty-input" id="qty-Paneer Biryani" value="0" min="0">
+    </div>
+  </div>
+
+  <!-- NON-VEG BIRYANI -->
+  <div class="category">
+    <h3>Non-Veg Biryani</h3>
+    <div class="menu-item">
+      <span class="item-name">Chicken Biryani</span>
+      <span class="item-price">₹250</span>
+      <input type="number" class="qty-input" id="qty-Chicken Biryani" value="0" min="0">
+    </div>
+    <div class="menu-item">
+      <span class="item-name">Mutton Biryani</span>
+      <span class="item-price">₹300</span>
+      <input type="number" class="qty-input" id="qty-Mutton Biryani" value="0" min="0">
+    </div>
+  </div>
+
+  <!-- STARTERS -->
+  <div class="category">
+    <h3>Starters</h3>
+    <div class="menu-item">
+      <span class="item-name">Veg Pakora</span>
+      <span class="item-price">₹80</span>
+      <input type="number" class="qty-input" id="qty-Veg Pakora" value="0" min="0">
+    </div>
+    <div class="menu-item">
+      <span class="item-name">Paneer Tikka</span>
+      <span class="item-price">₹120</span>
+      <input type="number" class="qty-input" id="qty-Paneer Tikka" value="0" min="0">
+    </div>
+  </div>
+
+  <!-- ICE CREAMS -->
+  <div class="category">
+    <h3>Ice Creams</h3>
+    <div class="menu-item">
+      <span class="item-name">Vanilla</span>
+      <span class="item-price">₹50</span>
+      <input type="number" class="qty-input" id="qty-Vanilla" value="0" min="0">
+    </div>
+    <div class="menu-item">
+      <span class="item-name">Chocolate</span>
+      <span class="item-price">₹60</span>
+      <input type="number" class="qty-input" id="qty-Chocolate" value="0" min="0">
+    </div>
+  </div>
+
+  <br>
+  <button type="button" onclick="placeOrder()">Next</button>
+</div>
+
+
+<!-- BILL PAGE -->
+<div id="bill" class="page" style="display:none;">
+  <h2>Bill</h2>
+  <div id="billDetails"></div>
+  <button type="button" onclick="goToHome()">Back to Home</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
